@@ -1,55 +1,37 @@
-Spring Boot MySQL JWT Spring Security OpenAPI
-Overview
-This project is a sample implementation using Spring Boot, MySQL for data persistence, JWT (JSON Web Tokens) for authentication, Spring Security for securing endpoints, and OpenAPI (Swagger) for API documentation.
+ 
+# Proyecto Foro hub con Spring Boot con MySQL, JWT y Spring Security
 
-Technologies Used
-Spring Boot: Framework for creating standalone, production-grade Spring-based applications.
-MySQL: Relational database used for data storage and retrieval.
-JWT (JSON Web Tokens): Used for secure authentication between parties.
-Spring Security: Provides authentication, authorization, and protection against common vulnerabilities.
-OpenAPI (Swagger): API documentation and design tools for developers and teams.
-Prerequisites
-JDK 8 or higher installed
-Maven or Gradle build tool installed
-MySQL server installed and running
-IDE (IntelliJ IDEA, Eclipse, etc.) with Spring Boot support
-Setup Instructions
-Clone the repository:
+## Resumen
+Este proyecto es una implementación de ejemplo que utiliza Spring Boot, MySQL para la persistencia de datos, JWT (JSON Web Tokens) para la autenticación, Spring Security para asegurar los endpoints y OpenAPI (Swagger) para la documentación de la API.
 
-bash
-Copiar código
-git clone https://github.com/your/repository.git
-cd repository
-Database Configuration:
+## Tecnologías utilizadas
+- **Spring Boot**: Framework para crear aplicaciones de Spring independientes y listas para producción.
+- **MySQL**: Base de datos relacional utilizada para el almacenamiento y recuperación de datos.
+- **JWT (JSON Web Tokens)**: Utilizado para la autenticación segura entre las partes.
+- **Spring Security**: Proporciona autenticación, autorización y protección contra vulnerabilidades comunes.
+- **OpenAPI (Swagger)**: Herramientas de documentación y diseño de API para desarrolladores y equipos.
 
-Create a MySQL database named your_database_name.
-Update application.properties or application.yml with your MySQL database configuration:
-yaml
-Copiar código
-spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
-spring.datasource.username=your_username
-spring.datasource.password=your_password
-Run the Application:
+## Requisitos previos
+- JDK 8 o superior instalado
+- Herramienta de construcción Maven o Gradle instalada
+- Servidor MySQL instalado y en ejecución
+- IDE (IntelliJ IDEA, Eclipse, etc.) con soporte para Spring Boot
 
-Using Maven:
-bash
-Copiar código
-mvn spring-boot:run
-Using Gradle:
-bash
-Copiar código
-./gradlew bootRun
-Testing the APIs:
+## Instrucciones de configuración
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/your/repository.git
+   cd repository
+   ```
 
-Once the application is running, you can access the Swagger UI for API documentation and testing:
-bash
-Copiar código
-http://localhost:8080/swagger-ui.html
-Endpoints
-POST /login: Authenticates a user and returns a JWT token.
-POST /topicos: Creates a new topic.
-GET /topicos: Retrieves a list of topics.
-GET /topicos/{id}: Retrieves details of a specific topic by ID.
-PUT /topicos: Updates information of a topic.
-DELETE /topicos/{id}: Deletes a topic by ID.
+2. Configuración de la base de datos:
+   - Crea una base de datos MySQL llamada `your_database_name`.
+   - Actualiza `application.properties` o `application.yml` con la configuración de tu base de datos MySQL:
+     ```yaml
+     spring.datasource.url=jdbc:mysql://localhost:3306/your_database_name
+     spring.datasource.username=your_username
+     spring.datasource.password=your_password
+     ```
+
+3. Ejecuta la aplicación:
 Security
